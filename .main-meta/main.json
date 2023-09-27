@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f46q24-curiosity-hpc-demo-code",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "PIC18F46Q24 CURIOSITY HPC DEMO CODE",
         "projectName": "pic18f46q24-curiosity-hpc-demo-code",
         "shortDescription": "These labs provide support for the Curiosity High Pin Count (HPC) development board using the PIC18F56Q24.",
         "ide": {
@@ -37,8 +37,8 @@
             }
         },
         "author": "Microchip",
-        "peripherals": [],
-        "keywords": [],
+        "peripherals": ["ADCC","UART","EEPROM","PWM","GPIO","WWDT"],
+        "keywords": ["User Interface", "MPLAB X", "MCC"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
