@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC18f-Q_DFP",
+            "semverRange": "^1.21.411"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=5.3.7"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -36,9 +36,9 @@
                 "versionRange": "*"
             }
         },
-        "author": "Prasad Aradhya",
-        "peripherals": [],
-        "keywords": [],
+        "author": "Microchip",
+        "peripherals": ["ADCC","UART","GPIO","PWM","EEPROM","CLC","NVM","TMR","WWDT" ],
+        "keywords": ["User Interface","MPLAB X","MCC"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
