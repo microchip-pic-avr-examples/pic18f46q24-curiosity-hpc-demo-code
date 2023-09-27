@@ -37,7 +37,7 @@
             }
         },
         "author": "Microchip",
-        "peripherals": ["ADCC","UART","GPIO","PWM","EEPROM","CLC","NVM","TMR","WWDT" ],
+        "peripherals": ["ADCC","UART","GPIO","PWM","EEPROM","CLC","TMR","WWDT" ],
         "keywords": ["User Interface","MPLAB X","MCC"],
         "additionalData": {
             "longDescription": {
