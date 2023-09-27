@@ -38,7 +38,7 @@
         },
         "author": "Microchip",
         "peripherals": ["ADCC","UART","EEPROM","PWM","GPIO","WWDT"],
-        "keywords": ["User Interface", "MPLAB X", "MCC"],
+        "keywords": ["Getting Started", "Melody", "Curiosity"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
