@@ -16,7 +16,7 @@ The following labs in this demo code project are designed for Microchip’s Curi
 ## Software Used
 
 - [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) 6.15.0 or newer
-- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.45.0 or newer compiler 
+- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.45.0 or newer compiler
 - [MPLAB Code Configurator](https://www.microchip.com/mplab/mplab-code-configurator) (MCC) 5.3.7 or newer
 - [MCC Melody Core 2.6.2](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody) or newer
 - [Microchip PIC18F-Q_DFP](https://packs.download.microchip.com/) (1.21.411) or newer
@@ -27,7 +27,7 @@ The following labs in this demo code project are designed for Microchip’s Curi
 - Curiosity High Pin Count (HPC) Development Board ([DM164136](https://www.microchip.com/developmenttools/ProductDetails/PartNO/DM164136))  
 
 ## LABS
-The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply holding down the S1 button on the board for about a second.
+The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply holding down the S1 button on the board for about one second.
 
 *ALL LABS ARE IN THE SAME PROGRAM SO THEY ALSO SHARE PERIPHERIALS*
 
@@ -47,7 +47,7 @@ The labs in this project are presented in the same order as they appear on the p
 
 **Potentiometer** – A 10kΩ potentiometer connected to the RA0 pin is used in labs requiring analog inputs. <br />
 
-**LEDs** - The Curiosity HPC Development Board has four LEDs (D2 through D5) that are connected to I/O ports RA4 through RA7, respectively. These LEDs are used to display the output of the different labs. <br/>
+**LEDs** - The Curiosity HPC Development Board has four LEDs, D2 through D5, that are connected to I/O ports RA4 through RA7, respectively. These LEDs are used to display the output of the different labs. <br/>
 
 **UART Pins** - UART requires the use of a TX and a RX pin.
 
@@ -57,7 +57,7 @@ The labs in this project are presented in the same order as they appear on the p
 
 
 
-### <u>Lab 1: Hello World</u>
+### <u>Lab 1: HELLO WORLD</u>
 #### Introduction
 This lab shows how to turn on an LED.
 
@@ -68,7 +68,7 @@ LED D2 will light up and stay lit.
 The LEDs are connected to the input-output (I/O) pins. First, the I/O pin must be configured to be an output. In this case, when one of these pins is driven high (LED_D2 = 1), the LED will turn on. These two logic levels are derived from the power pins of the PIC MCU. Since the PIC's power pin (VDD) is connected to 5V or 3.3V and the source (VSS) to ground (0V), a logic level of ‘1’ is equivalent to 5V or 3.3V, and a logic level of ‘0’ is 0V.
 
 
-### <u>Lab 2: Blink</u>
+### <u>Lab 2: BLINK</u>
 #### Introduction
 This lab shows how to blink an LED.
 
@@ -76,7 +76,7 @@ This lab shows how to blink an LED.
 LED D2 blinks at a rate of approximately 1.5 seconds.
 
 #### Summary
-One way to create a delay is to spend time decrementing a value. In assembly, the timing can be accurately programmed since the user will have direct control on how the code is executed. In 'C', the compiler takes the 'C' and compiles it into assembly before creating the file to program to the actual PIC MCU (HEX file). Because of this, it is hard to predict exactly how many instructions it takes for a line of 'C' to execute. For a more accurate timing in C, this lab uses the MCU’s TIMER1 module to produce the desired delay. TIMER1 is discussed in Lab 7: Timers.
+One way to create a delay is to spend time decrementing a value. In assembly, the timing can be accurately programmed since the user will have direct control on how the code is executed. In 'C', the compiler takes the 'C' and compiles it into assembly before creating the file to program to the actual PIC MCU (HEX file). Because of this, it is hard to predict exactly how many instructions it takes for a line of 'C' to execute. For a more accurate timing in 'C', this lab uses the MCU’s TIMER1 module to produce the desired delay. TIMER1 is discussed in Lab 7: Timers.
 
 
 ### <u>Lab 3: ROTATE</u>
@@ -87,12 +87,12 @@ This lab is built on Lab 1 and 2, which showed how to light up a LED and then ma
 LEDs D2, D3, D4 and D5 light up in turn every 500 milliseconds. Once D5 is lit, D2 lights up and the pattern repeats.
 
 #### Summary
-In C, we use Binary Left Shift and Right Shift Operators (<< and >>, respectively) to move bits around in the registers. The shift operations are 9-bit operations involving the 8-bit register being manipulated and the Carry bit in the STATUS register as the ninth bit. With the rotate instructions, the register contents are rotated through the Carry bit. <br />
+In 'C', we use Binary Left Shift and Right Shift Operators (<< and >>, respectively) to move bits around in the registers. The shift operations are 9-bit operations involving the 8-bit register being manipulated and the Carry bit in the STATUS register as the ninth bit. With the rotate instructions, the register contents are rotated through the Carry bit. <br />
 
-For example, for a certain register rotateReg, we want to push a ‘1’ into the LSB of the register and have the rest of the bits shift to the left, we can use the Binary Left Shift Operator (<<). We would first have to set up the Carry bit with the value that we want to push into the register before we execute shift instruction, as seen in the figure below.
+For example, for a certain register rotateReg, we want to push a ‘1’ into the LSB of the register and have the rest of the bits shift to the left, we can use the Binary Left Shift Operator (<<). We would first have to set up the Carry bit with the value that we want to push into the register before we execute shift instruction.
 
 
-Similarly, if we want to push a ‘1’ into the MSB of the register and have the rest of the bits shift to the right, we can use the Binary Right Shift Operator (>>). We would first have to set up the Carry bit with the value that we want to push into the register before we execute shift instruction, as seen in  the figure below.
+Similarly, if we want to push a ‘1’ into the MSB of the register and have the rest of the bits shift to the right, we can use the Binary Right Shift Operator (>>). We would first have to set up the Carry bit with the value that we want to push into the register before we execute shift instruction.
 
 
 ### <u>Lab 4: ANALOG-TO-DIGITAL CONVERSION (ADC)</u>
@@ -100,23 +100,23 @@ Similarly, if we want to push a ‘1’ into the MSB of the register and have th
 This lab shows how to configure the ADC, run a conversion, read the analog voltage controlled by the on-board potentiometer, print the conversion result on UART and display the high order four bits on the display.
 
 #### Hardware Effects
-The four most significant bits of the ADC result are reflected onto each of the four LEDs respectively. Rotate the potentiometer to change the display. <br />
+The four most significant bits of the ADC results are reflected onto each of the four LEDs respectively. Rotate the potentiometer to change the display. <br />
 The ADC value will be printed on UART TX pin which is connected to pin RC6 through PPS. Connect this pin to the Virtual COM port's TX pin using a jumper wire to use the onboard serial to USB feature.
 
 #### Summary
-The PIC18-Q24 family of devices have an on-board Single-ended (ADCC) Analog-to-Digital Converter with computationa module and 10 bits of resolution. The converter can be referenced to the device’s VDD or an external voltage reference. This lab references it to VDD. The result from the ADC is represented by a ratio of the voltage to the reference.
+The PIC18-Q24 family of devices have an on-board Single-ended (ADCC) Analog-to-Digital Converter with computation module and 10 bits of resolution. The converter can be referenced to the device’s VDD or an external voltage reference. This lab references it to VDD. The result from the ADC is represented by a ratio of the voltage to the reference.
 
 ## ADCC SETUP
 ![ADCC Set-up](images/ADCCCONFIG-HPC.png)
 
 ### <u>Lab 5: VARIABLE SPEED ROTATE</u>
 #### Introduction
-This lab combines all of the previous lab to produce a variable speed rotating LED display that is proportional to the ADC value. The ADC value and LED rotate speed are inversely proportional to each other.
+This lab combines all of the previous labs to produce a variable speed rotating LED display that is proportional to the ADC value. The ADC value and LED rotate speed are inversely proportional to each other.
 #### Hardware Effects
 Rotate the on-board potentiometer to change the speed of the LEDs shift. <br />
 The ADC value will be printed on UART TX pin which is connected to pin RC6 through PPS. Connect this pin to the Virtual COM port's TX pin using a jumper wire to use the onboard serial to USB feature.
 #### Summary
-A crucial step in this lab is to check if the ADC value is 0. If it does not perform the zero check, and the ADC result is zero, the LEDs will rotate at an incorrect speed. This is an effect of the delay value underflowing from 0 to 255.
+A crucial step in this lab is to check if the ADC value is '0.' If it does not perform the zero check, and the ADC result is zero, the LEDs will rotate at an incorrect speed. This is an effect of the delay value underflowing from 0 to 255.
 
 
 
@@ -148,7 +148,7 @@ This lab configures Timer1 to count instruction cycles and to set a flag when it
 
 ### <u>Lab 8: INTERRUPTS</u>
 #### Introduction
-This lab discusses all about interrupts – its purpose, capabilities and how to set them up. Most interrupts are sourced from MCU peripheral modules. Some I/O pins can also be configured to generate interrupts whenever a change in state is detected. Interrupts usually signal events that require servicing by the software’s Interrupt Service Routine (ISR). Once an interrupt occurs, the program counter immediately jumps to the ISR and once the Interrupt Flag is cleared, resumes what it was doing before. It is a rather more efficient way of watching out for events than continuously polling a bit or register.
+This lab discusses all about interrupts – its purpose, capabilities and how to set them up. Most interrupts are sourced from MCU peripheral modules. Some I/O pins can also be configured to generate interrupts whenever a change in state is detected. Interrupts usually signal events that require servicing by the software’s Interrupt Service Routine (ISR). Once an interrupt occurs, the program counter immediately jumps to the ISR and once the Interrupt Flag is cleared, resumes what it was doing before. It is a more efficient way of watching out for events than continuously polling a bit or register.
 #### Hardware Effects
 LEDs D5, D4, D3 and D2 rotate from left to right at a constant rate of 499.712 ms.
 #### Summary
@@ -161,14 +161,15 @@ This lab demonstrates the advantage of using interrupts over polling. An interru
 #### Introduction
 This lab will introduce the Sleep mode. SLEEP() function is used to put the device into a low power standby mode.
 #### Hardware Effects
-Once this lab is on RUNNING state, the watchdog timer will start counting. While in Sleep mode, LEDs D2/D4 and LEDs D3/D5 are turned ON and OFF respectively. Pressing the switch won't go to the next lab since the PIC is in Sleep mode. After the watchdog timer has reached its period, which is approximately 4 seconds for this lab, the PIC exits sleep mode and the four LEDs, D2 through D5, are toggled. This will be done only once.
+Once this lab is on RUNNING state, the watchdog timer will start counting. While in Sleep mode, LEDs D2/D4 and LEDs D3/D5 are turned ON and OFF respectively. Pressing the switch will not go to the next lab since the PIC is in Sleep mode. After the watchdog timer has reached its period, which is approximately four seconds for this lab, the PIC exits sleep mode and the four LEDs, D2 through D5, are toggled. This will be done only once.
 #### Summary
-The Power-Down mode is entered by executing the SLEEP instruction. Upon entering Sleep mode, there are different conditions that can exist such as:
-• WDT will be cleared but keeps running, if enabled for operation during Sleep.
-• PD bit of the STATUS register is cleared.
-• TO bit of the STATUS register is set.
-• CPU clock is disabled.
-Different PICs have different condition once they enter Sleep mode so it is recommended that the reader refer to the datasheet to know more of these conditions. <br />
+The Power-Down mode is entered by executing the SLEEP instruction. Upon entering Sleep mode, there are different conditions that can exist such as: <br />
+• WDT will be cleared but keeps running, if enabled for operation during Sleep <br />
+• PD bit of the STATUS register is cleared <br />
+• TO bit of the STATUS register is set <br />
+• CPU clock is disabled <br />
+
+Different PICs have different conditions once they enter Sleep mode so it is recommended that the reader refer to the datasheet to know more of these conditions. <br />
 The Watchdog Timer (WDT) is a system timer that generates a Reset if the firmware does not issue a CLRWDT instruction within the time-out period. WDT is typically used to recover the system from unexpected events. When the device enters Sleep, the WDT is cleared. If the WDT is enabled during Sleep, the WDT resumes counting. When the device exits Sleep, the WDT is cleared again. When a WDT time-out occurs while the device is in Sleep, no Reset is generated.
 
 ## WWDT SETUP
@@ -178,9 +179,9 @@ The Watchdog Timer (WDT) is a system timer that generates a Reset if the firmwar
 #### Introduction
 This lab provides code for writing and reading a single byte onto the on-board EEPROM. EEPROM is nonvolatile memory, meaning that it does not lose its value when power is shut off. This is unlike RAM, which will lose its value when no power is applied. The EEPROM is useful for storing variables that must still be present during no power. A good use case is to store calibration data for the user application and have it loaded on every boot-up. It is also convenient to use if the entire RAM space is used up. Writes and reads to the EEPROM are relatively quick, and are much faster than program memory operations.
 #### Hardware Effects
-The top 4 MSBs of the ADC is written to EEPROM. These are read afterwards and displayed on the LEDs. Rotating the potentiometer changes value of the ADC to be written to and read from EEPROM.
+The top four MSBs of the ADC is written to EEPROM. These are read afterwards and displayed on the LEDs. Rotating the potentiometer changes value of the ADC to be written to and read from EEPROM.
 #### Summary
-This lab has a similar appearance to Lab 4: ADC. But instead of directly moving the ADC result directly onto the LEDs, it performs a simple “write” and “read” on the EEPROM. As shown on figure below, the top 4 MSBs of the ADC result is first written to EEPROM, and retrieved later from the same address before moving onto the LEDs.
+This lab has a similar appearance to Lab 4: ADC. But instead of directly moving the ADC result directly onto the LEDs, it performs a simple “write” and “read” on the EEPROM. As shown on figure below, the top four MSBs of the ADC result is first written to EEPROM, and retrieved later from the same address before moving onto the LEDs.
 
 ## NVM SETUP
 ![NVM Set-up](images/NVMCONFIG-HPC.png)
