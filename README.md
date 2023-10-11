@@ -29,7 +29,6 @@ The following labs in this demo code project are designed for Microchip’s Curi
 ## LABS
 The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply holding down the S1 button on the board for about one second.
 
-*ALL LABS ARE IN THE SAME PROGRAM SO THEY ALSO SHARE PERIPHERIALS*
 
 • Lab 1: Hello World (Turn On an LED) <br />
 • Lab 2: Blink <br />
