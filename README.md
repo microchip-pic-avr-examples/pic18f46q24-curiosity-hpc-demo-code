@@ -27,7 +27,7 @@ The following labs in this demo code project are designed for Microchip’s Curi
 - Curiosity High Pin Count (HPC) Development Board ([DM164136](https://www.microchip.com/developmenttools/ProductDetails/PartNO/DM164136))  
 
 ## LABS
-The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply holding down the S1 button on the board for about one second.
+The labs in this project are presented in the same order as they appear on the programmed labs. You can progress through each of the labs by simply holding down the S1 button on the board for about one second. All of the labs in this code example are contained within the same MPLABX project, and the peripherals are shared / re-used in many of the exercises. 
 
 
 • Lab 1: Hello World (Turn On an LED) <br />
